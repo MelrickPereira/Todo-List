@@ -22,7 +22,7 @@ export default function Home() {
   const [todos,setTodos] = useState([]);
   const [input,setInput] = useState('');
   // Create Todo
-  const createTodo = async (e)=>{
+  const createTodo = async (e:any)=>{
     e.preventDefault();
     if(input==''){
       alert('Please enter a valid ToDo');
@@ -51,7 +51,7 @@ export default function Home() {
 
 
   // Update Todo
-const toggleComplete = async (todo) =>
+const toggleComplete = async (todo:any) =>
 {
   await updateDoc(doc(db,'todos',todo.id),{
     completed:!todo.completed
@@ -60,7 +60,7 @@ const toggleComplete = async (todo) =>
 
 
   // Delete Todo
-const deleteTodo = async (id)=>
+const deleteTodo = async (id:any)=>
 {
   await deleteDoc(doc(db,'todos',id))
 }
