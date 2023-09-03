@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { useState, useEffect} from 'react'
 import Todo from '../pages/components/Todo'
-import { todo } from 'node:test'
 import {db} from '../pages/firebase'
 import {query , collection , onSnapshot, QuerySnapshot, updateDoc,doc, addDoc,deleteDoc} from 'firebase/firestore'
 
