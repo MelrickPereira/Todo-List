@@ -39,7 +39,7 @@ export default function Home() {
   useEffect(()=>{
     const q = query(collection(db,'todos'));
     const unsubscribe = onSnapshot(q,(QuerySnapshot)=>{
-      let todosArr = [] ;
+       let todosArr = [];
       QuerySnapshot.forEach((doc)=>{
         todosArr.push({...doc.data(),id: doc.id});
       });
